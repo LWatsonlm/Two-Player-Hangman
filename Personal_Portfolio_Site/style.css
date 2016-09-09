@@ -11,7 +11,6 @@ span {
 }
 
 p {
-  font-family: 'Roboto Slab', serif;
 }
 
 nav ul {
@@ -19,6 +18,7 @@ nav ul {
   display: block;
   position: fixed;
   list-style: none;
+  float: right;
 }
 
 .flexbox {
@@ -28,6 +28,26 @@ nav ul {
   align-items: center;
 }
 
+h2 {
+  text-align: center;
+  display: block;
+}
+
+.about {
+  background-image: url("/Users/latoyawatson/wdi/projects/Personal_Portfolio_Site/background image- blue.png");
+}
+
+
+a {
+  text-decoration: none;
+}
+
 a:hover {
   text-decoration: line-through;
+}
+
+footer {
+  clear:both;
+  display: block;
+  position: fixed;
 }
