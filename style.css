@@ -1,0 +1,84 @@
+
+/*font-family: 'Roboto Slab', serif;*/
+/*font-family: 'Sanchez', serif;*/
+/*font-family: 'Handlee', cursive;*/
+body {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  margin: 50px;
+}
+
+span {
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  text-shadow: 2px 2px rgb(200,200,200);
+}
+
+p {
+}
+
+main {
+  background-color: #FFFFFF;
+  padding: 40px;
+  margin: 40px;
+}
+
+
+nav ul {
+  font-family: 'Roboto Slab', serif;
+  display: inline;
+  position: fixed;
+  list-style: none;
+  text-align: right;
+}
+
+/*.flexbox {*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+/*}*/
+
+h2 {
+  text-align: center;
+  display: block;
+}
+
+.about {
+  /*background-image: url("/Users/latoyawatson/wdi/projects/background image- red-smaller-smaller.png");*/
+  padding: 20px 0 15px 0;
+  background-color: #F7F7F6;
+  /*opacity: 0.5;*/
+}
+
+/*img {*/
+  /*background-repeat: no-repeat;*/
+/*}*/
+
+
+.about p {
+  font-size: 48px;
+  font-weight: bold;
+  display: block;
+  color: black;
+  font-family: 'Antic Slab', serif;
+  /*font-weight: 300px;*/
+  line-height: 57px;
+  padding: 40px;
+  margin: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: line-through;
+}
+
+footer {
+  clear:both;
+  display: block;
+  position: fixed;
+
+}
