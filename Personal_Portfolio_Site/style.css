@@ -1,0 +1,33 @@
+
+/*font-family: 'Roboto Slab', serif;*/
+/*font-family: 'Sanchez', serif;*/
+/*font-family: 'Handlee', cursive;*/
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+span {
+  font-family: 'Handlee', cursive;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+}
+
+nav ul {
+  font-family: 'Roboto Slab', serif;
+  display: block;
+  position: fixed;
+  list-style: none;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  text-decoration: line-through;
+}
