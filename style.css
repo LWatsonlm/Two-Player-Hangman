@@ -3,7 +3,7 @@
 /*font-family: 'Sanchez', serif;*/
 /*font-family: 'Handlee', cursive;*/
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Antic Slab', serif;
   text-align: center;
   margin: 50px;
 }
@@ -25,7 +25,7 @@ main {
 
 
 nav ul {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Antic Slab', serif;
   display: inline;
   position: fixed;
   list-style: none;
@@ -42,6 +42,7 @@ nav ul {
 h2 {
   text-align: center;
   display: block;
+  font-size: 35px;
 }
 
 .about {
@@ -57,8 +58,8 @@ h2 {
 
 
 .about p {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: 35px;
+  /*font-weight: bold;*/
   display: block;
   color: black;
   font-family: 'Antic Slab', serif;
@@ -66,6 +67,16 @@ h2 {
   line-height: 57px;
   padding: 40px;
   margin: 40px;
+}
+
+h1 {
+  font-size: 35px;
+  /*font-weight: bold;*/
+  display: block;
+  color: black;
+  font-family: 'Antic Slab', serif;
+  /*font-weight: 300px;*/
+  line-height: 57px;
 }
 
 a {
@@ -77,8 +88,14 @@ a:hover {
 }
 
 footer {
-  clear:both;
-  display: block;
-  position: fixed;
+  padding-bottom: 20px;
+  font-size: 23px;
+}
 
+.email {
+  margin-bottom: 20px;
+}
+
+.social a {
+  padding: 0 30px 0 30px;
 }
