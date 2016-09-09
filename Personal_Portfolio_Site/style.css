@@ -13,12 +13,16 @@ span {
 p {
 }
 
+main {
+  background-color: #F7F7F6;
+}
+
 nav ul {
   font-family: 'Roboto Slab', serif;
-  display: block;
+  display: inline;
   position: fixed;
   list-style: none;
-  float: right;
+  text-align: right;
 }
 
 .flexbox {
@@ -28,15 +32,36 @@ nav ul {
   align-items: center;
 }
 
+.work {
+  justify-content: space-around;
+  display: flex;
+}
+
 h2 {
   text-align: center;
   display: block;
 }
 
+
+
 .about {
-  background-image: url("/Users/latoyawatson/wdi/projects/Personal_Portfolio_Site/background image- blue.png");
+  background-image: url("/Users/latoyawatson/wdi/projects/Personal_Portfolio_Site/background image- red-smaller.png");
+  background-size: cover;
+  padding: 75px 0 45px 0;
+  opacity: 0.9;
 }
 
+.about p {
+  font-size: 48px;
+  font-weight: bold;
+  display: block;
+  color: white;
+  font-family: 'Antic Slab', serif;
+  font-weight: 300px;
+  line-height: 57px;
+  padding: 40px;
+  margin: 40px;
+}
 
 a {
   text-decoration: none;
@@ -50,4 +75,5 @@ footer {
   clear:both;
   display: block;
   position: fixed;
+
 }
