@@ -19,12 +19,12 @@ span {
   font-family: 'Merriweather', serif;
 }
 
-#hangman {
+#hangman-counter {
   display: flex;
   justify-content: space-around;
 }
 
-#hangman div {
+#hangman-counter div {
 align-items: center;
 margin: 10px;
 border: red dotted;
@@ -37,7 +37,8 @@ padding: 15px;
 }
 
 .dashes {
-  color: red;
+  color: #000000;
+  font-family: 'Bangers', cursive;
 }
 
 a {

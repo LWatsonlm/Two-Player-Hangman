@@ -13,11 +13,14 @@ function getWord(e) {
     }
 }
 
-
-// prevent refreshing when button or letter is clicked
-
 $("#enterWord #submit-word").on("click", getWord);
 
+function guessWord() {
+
+}
+
+
+// prevent refreshing when button or letter is clicked
 $(".alpha").on("click", function(e) {
   e.preventDefault();
   console.log(e);
