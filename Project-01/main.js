@@ -2,6 +2,9 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var word = $("#enterWord #word-field");
 var answerArray = [];
 var secretWord = "";
+var guessArray = [];
+
+
 
 // var submit = $("#enterWord #submit-word");
 
@@ -11,7 +14,7 @@ function getWord(e) {
   letter = secretWord.split('');
   var remainingLetters = secretWord.length;
     for (i = 0; i < letter.length; i++) {
-      answerArray[i] = "_";
+      answerArray[i] = "_"; // need to get this to display
       console.log("why??");
     }
 }
@@ -22,17 +25,18 @@ function getWord(e) {
 // if it's not in the array, you get a strike (have 5 chances)
 
 function guessLetter() {
-var guess = $(this).attr('id');
-var guessArray = [];
+guess = $(this).attr('id');
 guessArray.push(guess);
 var same = guessArray.every(function(element, index) {
 return element == secretWord[index];
   });
   console.log(same);
+  console.log(guessArray);
 }
 
 $("#enterWord #submit-word").on("click", getWord);
 $(".alpha").children().on("click", guessLetter);
+
 
 // if #a is in the letter array, display "you got a right letter"
 // else decrease remainingLetters by 1  example: remainingLetters--
