@@ -15,20 +15,42 @@ h2 {
 
 span {
   font-size: 30px;
-  padding: 15px;
+  padding: 10px;
+  font-family: 'Merriweather', serif;
+}
+
+#hangman {
+  display: flex;
+  justify-content: space-around;
+}
+
+#hangman div {
+align-items: center;
+margin: 10px;
+border: red dotted;
+padding: 15px;
 }
 
 .alpha {
   background-color: #6F6555;
-  margin: 30px 280px 30px 280px;
+  margin: 30px 410px 30px 410px;
+}
+
+.dashes {
+  color: red;
 }
 
 a {
   text-decoration: none;
   color: #000000;
+  padding: 1px;
 }
 
 a:hover {
   text-decoration: none;
-  background-color: green;
+  background-color: #FFFFFF;
+}
+
+footer {
+  text-align: left;
 }
