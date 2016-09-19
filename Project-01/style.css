@@ -1,5 +1,5 @@
 body {
-  font-family: 'Bangers', cursive;
+  font-family: 'Covered By Your Grace', cursive;
   margin: 10px 100px 10px 100px;
   text-align: center;
   background-image: url('background.jpg');
@@ -7,6 +7,7 @@ body {
 
 h1 {
   font-size: 60px;
+  font-weight: bold;
 }
 
 h2 {
@@ -16,7 +17,7 @@ h2 {
 span {
   font-size: 30px;
   padding: 10px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Cinzel', serif;
 }
 
 #hangman-counter {
@@ -38,7 +39,7 @@ padding: 15px;
 
 .dashes {
   color: #000000;
-  font-family: 'Bangers', cursive;
+  font-family: 'Cinzel', serif;
 }
 
 a {

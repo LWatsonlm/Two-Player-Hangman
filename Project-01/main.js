@@ -1,23 +1,44 @@
 var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var word = $("#enterWord #word-field");
+var answerArray = [];
+var secretWord = "";
 
 // var submit = $("#enterWord #submit-word");
 
 function getWord(e) {
   e.preventDefault();
   secretWord = word.val();
-  var letter = secretWord.split('');
+  letter = secretWord.split('');
+  var remainingLetters = secretWord.length;
     for (i = 0; i < letter.length; i++) {
-      $("#hangmanPlatform").append("<div class='dashes'></div>");
-      console.log("why");
+      answerArray[i] = "_";
+      console.log("why??");
     }
 }
 
-$("#enterWord #submit-word").on("click", getWord);
+// if clicked #a ... #z
+// check if #a ... #z is in the secretWord array
+// if it's in the array, that's good
+// if it's not in the array, you get a strike (have 5 chances)
 
-function guessWord() {
+function guessLetter() {
+var guess = $(this).attr('id');
+var guessArray = [];
+guessArray.push(guess);
+var same = guessArray.every(function(element, index) {
+return element == secretWord[index];
 
+  });
+  console.log(same);
 }
+
+$("#enterWord #submit-word").on("click", getWord);
+$(".alpha").children().on("click", guessLetter);
+
+// if #a is in the letter array, display "you got a right letter"
+// else decrease remainingLetters by 1  example: remainingLetters--
+
+
 
 
 // prevent refreshing when button or letter is clicked
@@ -26,6 +47,10 @@ $(".alpha").on("click", function(e) {
   console.log(e);
 });
 
+// for (j = 0; j < letter.length; j++) {
+//   console.log(letter[j]);
+//   }
+// }
 
 
 // function handleGuesses() {
