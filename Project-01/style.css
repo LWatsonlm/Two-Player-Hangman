@@ -17,7 +17,7 @@ h2 {
 span {
   font-size: 30px;
   padding: 10px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Covered By Your Grace', cursive;
 }
 
 #hangman-counter {
@@ -39,7 +39,7 @@ padding: 15px;
 
 .dashes {
   color: #000000;
-  font-family: 'Cinzel', serif;
+  font-family: 'Covered By Your Grace', cursive;
 }
 
 a {

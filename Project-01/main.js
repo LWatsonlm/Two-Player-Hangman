@@ -27,7 +27,6 @@ var guessArray = [];
 guessArray.push(guess);
 var same = guessArray.every(function(element, index) {
 return element == secretWord[index];
-
   });
   console.log(same);
 }
