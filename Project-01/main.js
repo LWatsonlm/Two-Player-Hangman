@@ -1,26 +1,29 @@
 var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var word = $("#enterWord #word-field");
 
-function getWord() {
-  word.val();
-  var letter = word.split(' ');
+// var submit = $("#enterWord #submit-word");
+
+function getWord(e) {
+  e.preventDefault();
+  secretWord = word.val();
+  var letter = secretWord.split('');
     for (i = 0; i < letter.length; i++) {
       $("#hangmanPlatform").append("<div class='dashes'></div>");
+      console.log("why");
     }
 }
 
 
-
 // prevent refreshing when button or letter is clicked
+
+$("#enterWord #submit-word").on("click", getWord);
+
 $(".alpha").on("click", function(e) {
   e.preventDefault();
   console.log(e);
 });
 
-$("#submit-word").on("click", function(e) {
-  e.preventDefault();
-  console.log(e);
-});
+
 
 // function handleGuesses() {
 //   if ()
