@@ -12,3 +12,23 @@ h1 {
 h2 {
   font-size: 40px;
 }
+
+span {
+  font-size: 30px;
+  padding: 15px;
+}
+
+.alpha {
+  background-color: #6F6555;
+  margin: 30px 280px 30px 280px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: green;
+}
