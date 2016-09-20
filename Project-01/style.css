@@ -36,6 +36,18 @@ span {
   font-family: 'Covered By Your Grace', cursive;
 }
 
+#submit-word {
+  background-color: rgba(178,34,34, 0.5);
+}
+
+#word-field {
+  border: 3px solid #555;
+}
+
+input[type=text]:focus {
+    background-color: rgba(178,34,34, 0.5);
+}
+
 #hangman-counter {
   display: flex;
   justify-content: space-around;
@@ -44,13 +56,11 @@ span {
 #hangman-counter div {
 align-items: center;
 margin: 10px;
-border: red dotted;
 padding: 15px;
 }
 
 .alpha {
   background-color: #6F6555;
-  /*margin: 30px 410px 30px 410px;*/
 }
 
 .dashes span {
@@ -95,7 +105,6 @@ p {
 }
 
 footer {
-  /*background:#ffab62;*/
   background: rgba(178,34,34, 0.5);
   width:100%;
   height:100px;
