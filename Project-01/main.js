@@ -1,4 +1,3 @@
-var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var word = $("#enterWord #word-field");
 var answerArray = [];
 var secretWord = "";
@@ -23,9 +22,6 @@ function getWord(e) {
     }
 }
 
-// this function takes the letter from player two after they
-// click on the letter. It looks at the guess array and matches
-// it go the
 
 function letterGuess() {
   guess = $(this).attr('id');
@@ -35,7 +31,7 @@ function letterGuess() {
     console.log("guessArray: " + guessArray);
     console.log("matches: " + matches);
     if (matches) {
-      $(".dashes div").html(underscoreify(secretWord, guessArray));
+      $(".dashes div").html(underscoreify(secretWord, guessArray)); // function inside of jquery selector!!! say what!?
     } else {
       alert("you got it wrong");
     }
@@ -45,33 +41,17 @@ function underscoreify(word, guesses) {
   var underscores = "";
   for (var i = 0; i < word.length; i++) {
       if (guesses.includes(word[i])) {
-        underscores += word[i];
+        underscores = underscores + word[i];
       } else {
-          underscores += "_";
+          underscores = underscores + "_";
       }
   }
   return underscores;
 }
 
-// function processGuess() {
-//   // this is saying if all of the guess array is true, then fill out the letters. Which is why the letters are appearing after it true
-// }
-
-// == (matches))
-  // if (guessArray.every(letters) == matches) {
-// if (guessArray.includes(letters) == matches)
-// letters
-
 $("#enterWord #submit-word").on("click", getWord);
 $(".alpha").children().on("click", letterGuess);
 // $(".alpha").children().on("click", css("background-color", red));
-
-
-// return letter == secretWord[index];
-// console.log("letter: " + letters);
-
-// if #a is in the letter array, display "you got a right letter"
-// else decrease remainingLetters by 1  example: remainingLetters--
 
 
 // prevent refreshing when button or letter is clicked
