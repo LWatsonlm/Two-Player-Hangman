@@ -3,9 +3,6 @@ var answerArray = [];
 var secretWord = "";
 var guessArray = [];
 var wordLength = 0;
-var limbCount = 0;
-
-
 
 // this functions gets the typed in word, splits it and creates
 // dashes based on the length of the word
@@ -14,7 +11,6 @@ function getWord(e) {
   e.preventDefault();
   secretWord = word.val();
   letters = secretWord.split('');
-  var remainingLetters = secretWord.length; // not used yet
     for (i = 0; i < letters.length; i++) {
       $(".dashes span").text(letters.length);
       answerArray[i] = " _ ";
@@ -23,21 +19,30 @@ function getWord(e) {
     }
 }
 
-
 function letterGuess() {
   guess = $(this).attr('id');
   guessArray.push(guess);
+  guessCount = guessArray.length;
     console.log("guess: " + guess);
     var matches = letters.includes(guess);
     console.log("guessArray: " + guessArray);
     console.log("matches: " + matches);
     if (matches) {
-      $(".dashes div").html(underscoreify(secretWord, guessArray)); // function inside of jquery selector!!! say what!?
-    } else {
-      alert("you got it wrong");
-      limbCount += 1;
-      $("#hangman-counter img").attr("src", "06-hangman.png");
-    }
+    $(".dashes div").html(underscoreify(secretWord, guessArray));
+    }   else if (guessCount == 1) {
+        $("img").attr("src", "06-hangman.png");
+    }   else if (guessCount == 2) {
+          $("img").attr("src", "05-hangman.png");
+    }   else if (guessCount == 3) {
+          $("img").attr("src", "04-hangman.png");
+    }   else if (guessCount == 4) {
+          $("img").attr("src", "03-hangman.png");
+    }   else if (guessCount == 5) {
+          $("img").attr("src", "02-hangman.png");
+    }   else {
+          $("img").attr("src", "01-hangman.png");
+          alert("Game Over");
+        }
 }
 
 function underscoreify(word, guesses) {
@@ -62,41 +67,3 @@ $(".alpha").on("click", function(e) {
   e.preventDefault();
   console.log(e);
 });
-
-// for (j = 0; j < letter.length; j++) {
-//   console.log(letter[j]);
-//   }
-// }
-
-
-// function handleGuesses() {
-//   if ()
-// }
-//
-// $("#a").on("click", handleGuesses);
-
-// if letter is in the array, do this
-// if not, add to hangman
-
-
-
-
-// function translate (word) {
-//     // take a string and make it into an array of letters
-//   return word.split("")
-//     // iterate over each letter in the array
-//       .map(function (letter) {
-//       // if the letter is a vowel
-//       if( vowels.includes(letter) ) {
-//           // add ub infront
-//         return "ub" + letter
-//       } else {
-//           // otherwise just need the letter
-//         return letter
-//       }
-//     })
-//     // don't forget to turn the array back into a string
-//     .join("")
-// }
-//
-// translate("hello")
