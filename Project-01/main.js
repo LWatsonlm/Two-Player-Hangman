@@ -29,12 +29,14 @@ function getWord(e) {
 function guessLetter() {
 guess = $(this).attr('id');
 guessArray.push(guess);
+console.log(guess);
 var same = guessArray.every(function(element, index) {
 return element == secretWord[index];
   });
   console.log(same);
   console.log(guessArray);
 }
+
 
 $("#enterWord #submit-word").on("click", getWord);
 $(".alpha").children().on("click", guessLetter);
