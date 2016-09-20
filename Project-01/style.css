@@ -43,6 +43,12 @@ padding: 15px;
   font-size: 40px;
 }
 
+.dashes div {
+  margin: 20px;
+  font-size: 60px;
+  font-family: 'Bangers', serif;
+}
+
 a {
   text-decoration: none;
   color: #000000;

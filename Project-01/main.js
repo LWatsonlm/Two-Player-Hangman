@@ -16,7 +16,8 @@ function getWord(e) {
   var remainingLetters = secretWord.length;
     for (i = 0; i < letter.length; i++) {
       $(".dashes span").text(letter.length);
-      answerArray[i] = "_"; // need to get this to display
+      answerArray[i] = " _ ";
+      $(".dashes div").append(answerArray[i]);
       console.log("why??");
     }
 }
