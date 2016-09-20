@@ -41,6 +41,7 @@ return element == secretWord[index];
 
 $("#enterWord #submit-word").on("click", getWord);
 $(".alpha").children().on("click", guessLetter);
+// $(".alpha").children().on("click", css("background-color", red));
 
 
 // if #a is in the letter array, display "you got a right letter"

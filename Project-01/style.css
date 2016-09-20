@@ -8,8 +8,6 @@ body {
 #container {
   display: flex;
   align-items: center;
-  margin: 20px;
-  padding: 10px;
 }
 
 #playerOne {
@@ -26,17 +24,14 @@ body {
   padding: 30px;
 }
 
-h1 {
-  font-size: 60px;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 40px;
-}
-
 span {
   font-size: 30px;
+  padding: 10px;
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+#word-field, #submit-word {
+  font-size: 20px;
   padding: 10px;
   font-family: 'Covered By Your Grace', cursive;
 }
@@ -86,6 +81,18 @@ a:hover {
   zoom: 1;
 }
 
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+}
 
 footer {
   /*background:#ffab62;*/
