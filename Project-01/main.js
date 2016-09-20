@@ -3,6 +3,7 @@ var answerArray = [];
 var secretWord = "";
 var guessArray = [];
 var wordLength = 0;
+var limbCount = 0;
 
 
 
@@ -34,6 +35,8 @@ function letterGuess() {
       $(".dashes div").html(underscoreify(secretWord, guessArray)); // function inside of jquery selector!!! say what!?
     } else {
       alert("you got it wrong");
+      limbCount += 1;
+      $("#hangman-counter img").attr("src", "06-hangman.png");
     }
 }
 
