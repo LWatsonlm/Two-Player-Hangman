@@ -8,18 +8,22 @@ body {
 #container {
   display: flex;
   align-items: center;
+  margin: 20px;
+  padding: 10px;
 }
 
 #playerOne {
   /*float: left;*/
   width: 50%;
   order: 1;
+  padding: 30px;
 }
 
 #playerTwo {
   /*float: right;*/
   width: 50%;
   order: 2;
+  padding: 30px;
 }
 
 h1 {
