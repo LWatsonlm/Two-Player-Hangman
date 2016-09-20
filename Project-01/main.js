@@ -31,28 +31,36 @@ function letterGuess() {
   guess = $(this).attr('id');
   guessArray.push(guess);
     console.log("guess: " + guess);
-  matches = letters.every(function(letter, index) {
-  return guessArray.includes(letter);
-  });
+    var matches = letters.includes(guess);
     console.log("guessArray: " + guessArray);
     console.log("matches: " + matches);
-    processGuess();
+    if (matches) {
+      $(".dashes div").html(underscoreify(secretWord, guessArray));
+    } else {
+      alert("you got it wrong");
+    }
 }
 
-// p.code:
-// if letter is in array, update $(".dashes div") with letter
-// else
-// display hangman a body part of hangman
-
-function processGuess() {
-  // this is saying if all of the guess array is true, then fill out the letters. Which is why the letters are appearing after it true
-  if (guessArray.includes(letters) !== matches) {
-    $(".dashes div").html(letters);
-  } else {
-    alert("you got it wrong");
+function underscoreify(word, guesses) {
+  var underscores = "";
+  for (var i = 0; i < word.length; i++) {
+      if (guesses.includes(word[i])) {
+        underscores += word[i];
+      } else {
+          underscores += "_";
+      }
   }
+  return underscores;
 }
 
+// function processGuess() {
+//   // this is saying if all of the guess array is true, then fill out the letters. Which is why the letters are appearing after it true
+// }
+
+// == (matches))
+  // if (guessArray.every(letters) == matches) {
+// if (guessArray.includes(letters) == matches)
+// letters
 
 $("#enterWord #submit-word").on("click", getWord);
 $(".alpha").children().on("click", letterGuess);
