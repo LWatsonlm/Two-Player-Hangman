@@ -4,9 +4,6 @@ var secretWord = "";
 var guessArray = [];
 var wordLength = 0;
 
-// this functions gets the typed in word, splits it and creates
-// dashes based on the length of the word
-
 function getWord() {
   secretWord = word.val();
   letters = secretWord.split('');
@@ -14,7 +11,6 @@ function getWord() {
       $(".dashes span").text(letters.length);
       answerArray[i] = " _ ";
       $(".dashes div").append(answerArray[i]);
-      console.log("word split works!");
     }
 }
 
@@ -55,7 +51,6 @@ function underscoreify(word, guesses) {
   }
   return underscores;
 }
-
 
 
 $("#enterWord #submit-word").on("click", function() {
