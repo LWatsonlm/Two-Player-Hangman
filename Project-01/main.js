@@ -7,8 +7,7 @@ var wordLength = 0;
 // this functions gets the typed in word, splits it and creates
 // dashes based on the length of the word
 
-function getWord(e) {
-  e.preventDefault();
+function getWord() {
   secretWord = word.val();
   letters = secretWord.split('');
     for (i = 0; i < letters.length; i++) {
@@ -57,9 +56,18 @@ function underscoreify(word, guesses) {
   return underscores;
 }
 
-$("#enterWord #submit-word").on("click", getWord);
+
+
+$("#enterWord #submit-word").on("click", function() {
+  getWord();
+  $("#enterWord #word-field").hide();
+  $("#enterWord #submit-word").hide();
+  $("#playerOne h2").hide();
+  // hint .show()
+});
+
+
 $(".alpha").children().on("click", letterGuess);
-// $(".alpha").children().on("click", css("background-color", red));
 
 
 // prevent refreshing when button or letter is clicked

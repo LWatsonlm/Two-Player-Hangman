@@ -11,7 +11,7 @@ body {
 }
 
 #playerOne {
-  width: 50%;
+  width: 30%;
   order: 2;
   padding: 30px;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 span {
-  font-size: 30px;
+  font-size: 45px;
   padding: 10px;
   font-family: 'Covered By Your Grace', cursive;
 }
@@ -38,15 +38,12 @@ span {
   font-family: 'Covered By Your Grace', cursive;
 }
 
-#submit-word {
-  background-color: rgba(178,34,34, 0.5);
-}
-
 #word-field {
-  border: 3px solid #555;
+  border: 2px solid #555;
+  width: 80%;
 }
 
-input[type=text]:focus {
+#submit-word, input[type=text]:focus {
     background-color: rgba(178,34,34, 0.5);
 }
 
@@ -62,7 +59,7 @@ padding: 15px;
 }
 
 .alpha {
-  background-color: #6F6555;
+  background-color: rgba(178,34,34, 0.3);
 }
 
 .dashes span {
