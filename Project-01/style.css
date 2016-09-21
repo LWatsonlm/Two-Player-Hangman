@@ -11,18 +11,19 @@ body {
 }
 
 #playerOne {
-  /*float: left;*/
-  width: 50%;
-  order: 1;
-  padding: 30px;
-  align-self: flex-start;
-}
-
-#playerTwo {
-  /*float: right;*/
   width: 50%;
   order: 2;
   padding: 30px;
+}
+
+#playerTwo {
+  width: 50%;
+  order: 3;
+  padding: 30px;
+}
+
+#hangman-counter {
+  order: 1;
 }
 
 span {

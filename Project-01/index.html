@@ -9,12 +9,12 @@
   <title>Hangman!</title>
 </head>
 <body>
-<div id="container">
-<div id="playerOne">
 <h1>CAN YOU SAVE THE DAY?</h1>
 <h2>Your best bud has been accused of being a witch! Help him escape death by guessing the right word!</h2>
-<main id ="hangmanPlatform">
 
+<div id="container">
+
+<div id="playerOne">
 <h2>Player One: Enter your word!</h2>
 <form id="enterWord">
   <input type="text" id="word-field">
@@ -22,9 +22,10 @@
 </form>
 </div>
 
-<div id="playerTwo">
-  <div id="hangman-counter">
+<div id="hangman-counter">
   <img src="hangman-stage.png" alt="body part 1"></div>
+
+<div id="playerTwo">
 
 <h2>Player Two: Click on the letter to guess the word!</h2>
 <div class= "alpha">
@@ -60,10 +61,8 @@
 <h2>This word is <span>0</span> letters long</h2>
 <div></div>
 </div>
-</main>
 </div>
 </div>
-
 
 <footer class="clearfix">
   <p>Instructions: This is a two player game. One person picks a word and then the other tries to guess it by making repeated guesses to letters in the word. If the letter is not in the word then a body part will be added to your friend. Good luck!</p>
