@@ -4,7 +4,8 @@ var secretWord = "";
 var guessArray = [];
 var wordLength = 0;
 
-function getWord() {
+function getWord(e) {
+  e.preventDefault();
   secretWord = word.val();
   letters = secretWord.split('');
     for (i = 0; i < letters.length; i++) {
@@ -55,7 +56,6 @@ $("#enterWord #submit-word").on("click", function() {
   $("#enterWord #word-field").hide();
   $("#enterWord #submit-word").hide();
   $("#playerOne h2").hide();
-  // add hint .show()
 });
 
 $(".alpha").children().on("click", letterGuess);
