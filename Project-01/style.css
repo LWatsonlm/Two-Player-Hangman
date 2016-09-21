@@ -30,7 +30,6 @@ body {
 span {
   font-size: 45px;
   padding: 10px;
-  font-family: 'Covered By Your Grace', cursive;
 }
 
 #word-field, #submit-word {
@@ -65,7 +64,6 @@ padding: 15px;
 
 .dashes span {
   color: #000000;
-  font-family: 'Covered By Your Grace', cursive;
   font-size: 40px;
 }
 
@@ -83,12 +81,12 @@ a {
 
 a:hover {
   text-decoration: none;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(128,0,0);
 }
+
 
 .clearfix {
   overflow: auto;
-  zoom: 1;
 }
 
 h1 {

@@ -18,10 +18,7 @@ function letterGuess() {
   guess = $(this).attr('id');
   guessArray.push(guess);
   guessCount = guessArray.length;
-    console.log("guess: " + guess);
     var matches = letters.includes(guess);
-    console.log("guessArray: " + guessArray);
-    console.log("matches: " + matches);
     if (matches) {
     $(".dashes div").html(underscoreify(secretWord, guessArray));
     }   else if (guessCount == 1) {
@@ -58,12 +55,10 @@ $("#enterWord #submit-word").on("click", function() {
   $("#enterWord #word-field").hide();
   $("#enterWord #submit-word").hide();
   $("#playerOne h2").hide();
-  // hint .show()
+  // add hint .show()
 });
 
-
 $(".alpha").children().on("click", letterGuess);
-
 
 // prevent refreshing when button or letter is clicked
 $(".alpha").on("click", function(e) {

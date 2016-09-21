@@ -69,7 +69,8 @@ There are a couple of features/issues I would like to fix.
 
 a. Turning a wrong letter red after player two clicks it
 b. Player two can click on the same letter, twice
-  i. I would like for this not to happen
+  1. I would like for this not to happen
 
 Features:
 a. Adding a box where player one can type in a suggestion or word hint. This will appear after the secret word is submitted
+b. You win message when full word is guessed correctly
