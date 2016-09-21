@@ -4,8 +4,7 @@ var secretWord = "";
 var guessArray = [];
 var wordLength = 0;
 
-function getWord(e) {
-  e.preventDefault();
+function getWord() {
   secretWord = word.val();
   letters = secretWord.split('');
     for (i = 0; i < letters.length; i++) {
@@ -51,7 +50,8 @@ function underscoreify(word, guesses) {
 }
 
 
-$("#enterWord #submit-word").on("click", function() {
+$("#enterWord #submit-word").on("click", function(e) {
+  e.preventDefault()
   getWord();
   $("#enterWord #word-field").hide();
   $("#enterWord #submit-word").hide();
