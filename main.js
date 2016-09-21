@@ -33,7 +33,7 @@ function letterGuess() {
           $("img").attr("src", "02-hangman.png");
     }   else {
           $("img").attr("src", "01-hangman.png");
-          alert("Game Over. The secret word is " + secretWord);
+          alert("Game Over. The secret word is: " + "''" + secretWord + "''");
         }
 }
 
