@@ -1,11 +1,11 @@
 I. User Stories
 ------------
 
-a. As user 1, I should be able to type in a word so that other players can guess my secret word.
-b. As user 2, I should be able to click on any letter in the alphabet so I can guess the word.
-c. As user 2, I should be able to know how many letters are in the secret word so that I can make good guesses.
-d. As user 2, I should be able to see the hangman pieces display so that I can see how many tries I have left.
-e. As user 2, I should be able to know when the game is over so that I can play again!
+1. As user 1, I should be able to type in a word so that other players can guess my secret word.
+2. As user 2, I should be able to click on any letter in the alphabet so I can guess the word.
+3. As user 2, I should be able to know how many letters are in the secret word so that I can make good guesses.
+4. As user 2, I should be able to see the hangman pieces display so that I can see how many tries I have left.
+5. As user 2, I should be able to know when the game is over so that I can play again!
 
 II. File list
 ------------
@@ -62,9 +62,8 @@ Lastly, when all the logic was complete. I cleaned up comments and uncesscary co
 V. Unsolved Issues
 ----------
 There are a couple of features/issues I would like to fix.
-a. Player two can click on the same letter, twice
 
-Features:
-a. Adding a box where player one can type in a suggestion or word hint. This will appear after the secret word is submitted
-b. You win message when full word is guessed correctly
-c. Turning a wrong letter red after player two clicks it
+1. Player two can click on the same letter, twice
+2. Adding a box where player one can type in a suggestion or word hint. This will appear after the secret word is submitted
+3. You win message when full word is guessed correctly
+4. Turning a wrong letter red after player two clicks it
