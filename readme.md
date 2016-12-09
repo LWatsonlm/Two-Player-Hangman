@@ -2,41 +2,37 @@ I. User Stories
 ------------
 
 a. As user 1, I should be able to type in a word so that other players can guess my secret word.
-
 b. As user 2, I should be able to click on any letter in the alphabet so I can guess the word.
-
 c. As user 2, I should be able to know how many letters are in the secret word so that I can make good guesses.
-
 d. As user 2, I should be able to see the hangman pieces display so that I can see how many tries I have left.
-
 e. As user 2, I should be able to know when the game is over so that I can play again!
 
 II. File list
 ------------
-index.html		      Contains content using HTML
-style.css           Contains the styling for HTML using CSS
-main.js		          Contains logic for game using JavaScript and jQuery
-hangman-stage.png   The mainstage, the image that appears when game is loaded
-01-hangman.png      Hangman body part one, displays when user misses a letter
-02-hangman.png      Hangman body part two, displays when user misses 2 letters
-03-hangman.png      Hangman body part three, displays when user misses 3 letters
-04-hangman.png      Hangman body part one, displays when user misses 4 letters
-05-hangman.png      Hangman body part one, displays when user misses 5 letters
-06-hangman.png      Hangman body part one, displays when user misses the final 6th letter.
-body-background.jpeg      The background of the game
+1. index.html		      Contains content using HTML
+2. style.css           Contains the styling for HTML using CSS
+3. main.js		          Contains logic for game using JavaScript and jQuery
+4. hangman-stage.png   The mainstage, the image that appears when game is loaded
+5. 01-hangman.png      Hangman body part one, displays when user misses a letter
+6. 02-hangman.png      Hangman body part two, displays when user misses 2 letters
+7. 03-hangman.png      Hangman body part three, displays when user misses 3 letters
+8. 04-hangman.png      Hangman body part one, displays when user misses 4 letters
+9. 05-hangman.png      Hangman body part one, displays when user misses 5 letters
+10. 06-hangman.png      Hangman body part one, displays when user misses the final 6th letter.
+11. body-background.jpeg      The background of the game
 
 
 III. Technologies Used
 ----------
 
-1. Style
+### Style
 Using CSS, instead using floats to arrange my layout, I took advantage of the CSS3 Flexible Box, aka flexbox. Flexbox gave me the flexiblity to easily move elements around on the page.
 
 For color, instead of Hex code, I tried a different method of using colors. I used rgba to change the transparency of the color.
 
 Lastly, I used Google Fonts to style the font
 
-2. Logic
+### Logic
 I used JavaScript and jQuery to build the logic around the game. Using mostly functions, for loops and if statments.
 
 When player one types in a word and clicks on submit, a function will trigger and uses jQuery to hide the secret word from player two.
@@ -66,11 +62,9 @@ Lastly, when all the logic was complete. I cleaned up comments and uncesscary co
 V. Unsolved Issues
 ----------
 There are a couple of features/issues I would like to fix.
-
-a. Turning a wrong letter red after player two clicks it
-b. Player two can click on the same letter, twice
-  1. I would like for this not to happen
+a. Player two can click on the same letter, twice
 
 Features:
 a. Adding a box where player one can type in a suggestion or word hint. This will appear after the secret word is submitted
 b. You win message when full word is guessed correctly
+c. Turning a wrong letter red after player two clicks it
