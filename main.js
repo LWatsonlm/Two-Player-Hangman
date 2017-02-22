@@ -10,19 +10,17 @@ $("#submit-word").on("click", () => {
   $.ajax({
     url: url,
     type: "get",
-    dataType: "json"
-    // $.ajax takes an object as an argument with at least three key-value pairs...
-    // (1) The URL endpoint for the JSON object.
-    // (2) Type of HTTP request.
-    // (3) Datatype. Usually JSON.
+    dataType: "text/plain"
   }).done((response) => {
     console.log("Ajax request success!")
     console.log(response);
   }).fail((response) => {
     console.log("Ajax request fails!")
-    console.log(response);
-    secretWord = response[Math.floor(Math.random() * response.length)];
-    console.log("this is the secret word: " + secretWord);
+    var lines = response.responseText.split( '\n' );
+    var randomLineIndex = Math.floor(Math.random() * lines.length);
+    var secertWord = lines[randomLineIndex];
+    console.log(randomLineIndex);
+    console.log(secertWord);
   }).always(() => {
     console.log("This always happens regardless of successful ajax request or not.")
   })  //  Set promises. Promises are callbacks that may or may not happen.
