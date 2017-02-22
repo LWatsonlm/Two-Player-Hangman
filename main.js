@@ -4,6 +4,30 @@ var secretWord = "";
 var guessArray = [];
 var wordLength = 0;
 
+$("#submit-word").on("click", () => {
+  // Make sure to add your API key to the URL!
+  var url = "http://linkedin-reach.hagbpyjegb.us-west-2.elasticbeanstalk.com/words?minLength=4"
+  $.ajax({
+    url: url,
+    type: "get",
+    dataType: "json"
+    // $.ajax takes an object as an argument with at least three key-value pairs...
+    // (1) The URL endpoint for the JSON object.
+    // (2) Type of HTTP request.
+    // (3) Datatype. Usually JSON.
+  }).done((response) => {
+    console.log("Ajax request success!")
+    console.log(response);
+  }).fail((response) => {
+    console.log("Ajax request fails!")
+    console.log(response);
+  }).always(() => {
+    console.log("This always happens regardless of successful ajax request or not.")
+  })  //  Set promises. Promises are callbacks that may or may not happen.
+      // A promise represents the future result of an asynchronous operation.
+})
+
+
 function getWord() {
   secretWord = word.val();
   letters = secretWord.split('');
