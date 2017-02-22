@@ -1,4 +1,3 @@
-var word = $("#enterWord #word-field");
 var answerArray = [];
 var secretWord = "";
 var guessArray = [];
@@ -32,7 +31,7 @@ function getWord() {
   }
 }
 
-
+// need to add wrong guesses here, not just guesses but need to change it to WRONG guesses
 function letterGuess() {
   guess = $(this).attr('id');
   guessArray.push(guess);
@@ -52,7 +51,7 @@ function letterGuess() {
           $("img").attr("src", "02-hangman.png");
     }   else {
           $("img").attr("src", "01-hangman.png");
-          alert("Game Over. The secret word is: " + "''" + secretWord + "''");
+          alert("Game Over. The secret word is: " + secretWord);
         }
 }
 
