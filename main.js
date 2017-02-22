@@ -9,7 +9,7 @@ function getWord() {
   letters = secretWord.split('');
     for (i = 0; i < letters.length; i++) {
       $(".dashes span").text(letters.length);
-      answerArray[i] = " _ ";
+      answerArray[i] = "  _  ";
       $(".dashes div").append(answerArray[i]);
     }
 }
@@ -43,7 +43,7 @@ function underscoreify(word, guesses) {
       if (guesses.includes(word[i])) {
         underscores = underscores + word[i];
       } else {
-          underscores = underscores + "_";
+          underscores = underscores + " _ ";
       }
   }
   return underscores;
