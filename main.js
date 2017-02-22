@@ -5,7 +5,6 @@ var guessArray = [];
 var wordLength = 0;
 
 $("#submit-word").on("click", () => {
-  // Make sure to add your API key to the URL!
   var url = "http://linkedin-reach.hagbpyjegb.us-west-2.elasticbeanstalk.com/words?minLength=4"
   $.ajax({
     url: url,
@@ -16,15 +15,14 @@ $("#submit-word").on("click", () => {
     console.log(response);
   }).fail((response) => {
     console.log("Ajax request fails!")
-    var lines = response.responseText.split( '\n' );
-    var randomLineIndex = Math.floor(Math.random() * lines.length);
-    var secertWord = lines[randomLineIndex];
-    console.log(randomLineIndex);
-    console.log(secertWord);
-  }).always(() => {
-    console.log("This always happens regardless of successful ajax request or not.")
-  })  //  Set promises. Promises are callbacks that may or may not happen.
+    lines = response.responseText.split( '\n' );
+    randomLineIndex = Math.floor(Math.random() * lines.length);
+    secretWord = lines[randomLineIndex];
+    console.log(secretWord);
+  }) //  Set promises. Promises are callbacks that may or may not happen.
       // A promise represents the future result of an asynchronous operation.
+  getWord();
+  console.log("does this work?");
 })
 
 
@@ -74,12 +72,12 @@ function underscoreify(word, guesses) {
 }
 
 
-$("#enterWord #submit-word").on("click", function(e) {
+$("#submit-word").on("click", function(e) {
   e.preventDefault()
-  getWord();
-  $("#enterWord #word-field").hide();
-  $("#enterWord #submit-word").hide();
-  $("#playerOne h2").hide();
+  // getWord();
+  // $("#enterWord #word-field").hide();
+  $("#submit-word").hide();
+  // $("#playerOne h2").hide();
 });
 
 $(".alpha").children().on("click", letterGuess);
