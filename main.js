@@ -21,6 +21,8 @@ $("#submit-word").on("click", () => {
   }).fail((response) => {
     console.log("Ajax request fails!")
     console.log(response);
+    secretWord = response[Math.floor(Math.random() * response.length)];
+    console.log("this is the secret word: " + secretWord);
   }).always(() => {
     console.log("This always happens regardless of successful ajax request or not.")
   })  //  Set promises. Promises are callbacks that may or may not happen.
@@ -29,8 +31,8 @@ $("#submit-word").on("click", () => {
 
 
 function getWord() {
-  secretWord = word.val();
   letters = secretWord.split('');
+  console.log(letters);
     for (i = 0; i < letters.length; i++) {
       $(".dashes span").text(letters.length);
       answerArray[i] = "  _  ";
