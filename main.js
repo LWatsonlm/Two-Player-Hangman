@@ -9,32 +9,29 @@ $("#submit-word").on("click", () => {
   $.ajax({
     url: url,
     type: "get",
-    dataType: "text/plain"
+    dataType: "text"  // "text/plain" is wrong - it gave me a bug that took forever to fix!
   }).done((response) => {
     console.log("Ajax request success!")
-    console.log(response);
-  }).fail((response) => {
-    console.log("Ajax request fails!")
-    lines = response.responseText.split( '\n' );
+    lines = response.split( '\n' );
     randomLineIndex = Math.floor(Math.random() * lines.length);
     secretWord = lines[randomLineIndex];
     console.log(secretWord);
-  }) //  Set promises. Promises are callbacks that may or may not happen.
-      // A promise represents the future result of an asynchronous operation.
-  getWord();
-  console.log("does this work?");
+    getWord();
+  }).fail((response) => {
+    console.log("Ajax request fails!")
+  }) //  Set promises. Promises are callbacks that may or may not happen. A promise represents the future result of an asynchronous operation.
 })
-
 
 function getWord() {
   letters = secretWord.split('');
   console.log(letters);
-    for (i = 0; i < letters.length; i++) {
-      $(".dashes span").text(letters.length);
-      answerArray[i] = "  _  ";
-      $(".dashes div").append(answerArray[i]);
-    }
+  for (i = 0; i < letters.length; i++) {
+    $(".dashes span").text(letters.length);
+    answerArray[i] = "  _  ";
+    $(".dashes div").append(answerArray[i]);
+  }
 }
+
 
 function letterGuess() {
   guess = $(this).attr('id');
@@ -43,15 +40,15 @@ function letterGuess() {
     var matches = letters.includes(guess);
     if (matches) {
     $(".dashes div").html(underscoreify(secretWord, guessArray));
-    }   else if (guessCount == 1) {
-        $("img").attr("src", "06-hangman.png");
-    }   else if (guessCount == 2) {
+  }     else if (guessCount === 1) {
+          $("img").attr("src", "06-hangman.png");
+    }   else if (guessCount === 2) {
           $("img").attr("src", "05-hangman.png");
-    }   else if (guessCount == 3) {
+    }   else if (guessCount === 3) {
           $("img").attr("src", "04-hangman.png");
-    }   else if (guessCount == 4) {
+    }   else if (guessCount === 4) {
           $("img").attr("src", "03-hangman.png");
-    }   else if (guessCount == 5) {
+    }   else if (guessCount === 5) {
           $("img").attr("src", "02-hangman.png");
     }   else {
           $("img").attr("src", "01-hangman.png");
